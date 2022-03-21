@@ -1,0 +1,138 @@
+@import "../common.scss";
+.div-header {
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @include display-flex-wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint(mobile-m) {
+    justify-content: end;
+  }
+
+  &.open {
+    justify-content: end;
+  }
+
+  .div-nabs {
+    height: fit-content;
+
+    .nav-tabs {
+      .button {
+        text-decoration-line: unset;
+        cursor: pointer;
+        color: #ffead4;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 9px 10px;
+        background-color: rgba(56, 152, 236, 0);
+        font-family: Morganite;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    @include breakpoint(mobile-m) {
+      display: none;
+      height: 0px;
+      transition: all 0.3s ease-in-out;
+
+      &.open {
+        height: auto;
+        display: block;
+        position: relative;
+        top: 5px;
+        background: black;
+        width: 100%;
+        padding: 20px 0px;
+        max-height: 50vh;
+      }
+    }
+  }
+
+  .div-connection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    .btn-connect {
+      color: white;
+      background: linear-gradient(to right, rgb(167, 118, 26), rgb(177, 113, 23), rgb(185, 133, 21), rgb(205, 163, 29));
+      transition: opacity 0.2s linear 0s;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 400;
+      width: max-content;
+      height: 45px;
+      width: 150px;
+      letter-spacing: 0.02857em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      &:hover {
+        color: rgb(250, 250, 250);
+        transform: scale(1.03);
+      }
+    }
+  
+  
+  }
+
+  .div-menu {
+    user-select: text;
+    -webkit-user-select: text;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .menu-line {
+      width: 18px;
+      height: 1px;
+      margin-bottom: 5px;
+      background-color: white;
+      transition: all 0.3s ease;
+      &.top-line {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      }
+      &.middle-line {
+        opacity: 1;
+      }
+      &.last-line {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
+        transform-style: preserve-3d;
+      }
+    }
+
+    &.open {
+      .menu-line {
+        &.top-line {
+          transform: translate3d(0px, 6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+        }
+        &.middle-line {
+          opacity: 0;
+        }
+        &.last-line {
+          transform: translate3d(0px, -6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
+        }
+      }
+    }
+    
+    @include breakpoint(mobile-m) {
+      display: block;
+      margin-left: 4vw;
+    }
+  }
+}

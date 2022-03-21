@@ -1,0 +1,68 @@
+.div-treetable {
+  margin-top: 50px;
+  .div-information {
+    border-radius: 10px;
+    .tbl-tree {
+      display: table;
+      overflow: hidden;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0px;
+      .tbl-header {
+        display: table-header-group;
+        background-color: transparent;
+        .row-items {
+          .header-title {
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.5rem;
+            letter-spacing: 0.01071em;
+            display: table-cell;
+            vertical-align: inherit;
+            border-bottom: 1px solid rgb(81, 81, 81);
+            padding: 16px;
+            color: rgb(255, 255, 255);
+            position: sticky;
+            top: 0px;
+            background-color: rgb(29, 33, 41);
+          }
+        }
+      }
+
+      .tbl-body {
+        .row-items {
+          .sub-item {
+            color: white;
+            display: table-cell;
+            background-color: #1d212994;
+            line-height: 1.5rem;
+            padding: 16px;
+            
+            .div-action {
+              .btn-action {
+                background: transparent;
+                border: none;
+                transition: all 0.5s ease;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+  
+                &:hover {
+                  background: rgb(81, 81, 81);
+                }
+              }
+
+              &+.div-action {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

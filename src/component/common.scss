@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Morganite";
+  src: local("Morganite"), url(../fonts/Morganite.ttf) format("truetype");
+}
+
+$font-erica: 'Erica One', cursive;
+$font-worksans: 'Work Sans', sans-serif;
+$font-luckiest: 'Luckiest Guy', cursive;
+$font-fuzzy: 'Fuzzy Bubbles', cursive;
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-rubik: 'Rubik', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+p {
+  margin: unset;
+}
+
+@mixin display-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin display-flex-wrap-center {
+  @include display-flex-wrap();
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+      @media (max-width: 1440px) {
+          @content;
+      }
+  } @else if $point == laptop-medium {
+    @media (max-width: 1250px) {
+        @content;
+    }
+  } @else if $point == laptop {
+      @media (max-width: 1120px) {
+          @content;
+      }
+  } @else if $point == tablet-medium {
+    @media (max-width: 940px) {
+        @content;
+    }
+  } @else if $point == tablet {
+      @media (max-width: 900px) {
+          @content;
+      }
+  } @else if $point == phablet {
+      @media (max-width: 768px) {
+          @content;
+      }
+  } @else if $point == mobile-m {
+    @media (max-width: 570px) {
+        @content;
+    }
+  } @else if $point == mobile {
+      @media (max-width: 500px) {
+          @content;
+      }
+  } @else {
+      @media ($point) {
+          @content;
+      }
+  }
+}

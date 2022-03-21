@@ -1,0 +1,36 @@
+.App-wrap {
+  text-align: center;
+  background-color: black;
+  min-height: 100vh;
+  .background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%!important;
+    min-height: 100%!important;
+  }
+  .App {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .App-wrap {
+    .App {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .App-wrap {
+    .App {
+      width: 95%;
+    }
+  }
+}

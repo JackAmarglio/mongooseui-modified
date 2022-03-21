@@ -1,0 +1,129 @@
+p {
+  margin: unset;
+}
+.treemodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 20px 30px;
+  background: linear-gradient(to right, rgb(58, 96, 115), rgb(22, 34, 42));;
+  border-radius: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+
+  
+}
+
+.modaloverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+
+// modal body style
+.treemodal {
+  .modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, rgb(243, 236, 120), rgb(175, 66, 97));
+    -webkit-background-clip: text;
+  }
+
+  .modal-body {
+    margin-top: 16px;
+    padding-bottom: 16px;
+    .txt-requirement {
+      font-size: 1.3rem;
+      color: white;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.0075em;
+    }
+    .txt-description {
+      margin: 0px 0px 16px;
+      color: white;
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 0.00938em;
+    }
+    .div-input {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.00938em;
+      color: rgb(255, 255, 255);
+      box-sizing: border-box;
+      border-radius: 4px;
+      cursor: text;
+      .tree-name {
+        width: calc(100% - 40px);
+        max-width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        padding: 15px 20px;
+        outline: none;
+        font-size: 1.5em;
+        color: white;
+        border-style: groove;
+        background: transparent;
+      }
+    }
+    .div-buttons {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-evenly;
+      .btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 1rem;
+        letter-spacing: 0.02857em;
+        line-height: 1.7;
+        transition: all 0.5s ease;
+        padding: 5px 20px;
+        border-radius: 5px;
+
+        &.action-create {
+          
+        }
+        &.action-cancel {
+          
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+      }
+      .btn-create {
+
+      }
+      .btn-cancel {
+
+      }
+    }
+  }
+}
